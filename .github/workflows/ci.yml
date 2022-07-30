@@ -35,7 +35,7 @@ jobs:
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
       - name: Check HTTPS reachability
-        run: curl -v -o /dev/null https://localhost
+        run: curl -v -o /dev/null https://cda3-devops-hamza.garage404.com
       - name: Create test database
         run: |
           docker compose exec -T php bin/console -e test doctrine:database:create
@@ -46,3 +46,16 @@ jobs:
         run: docker compose exec -T php bin/console doctrine:schema:validate --skip-sync
       - name: Jest
         run: docker compose exec -T pwa yarn test --ci --passWithNoTests
+  
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Push to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: 57.128.17.150
+          username: ubuntu
+          password: ubuntu
+          script: cd cda3-devops && git pull
