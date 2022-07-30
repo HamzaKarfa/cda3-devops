@@ -58,4 +58,4 @@ jobs:
           host: 57.128.17.150
           username: ubuntu
           password: ubuntu
-          script: cd cda3-devops && git pull
+          script: pwd
