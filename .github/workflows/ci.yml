@@ -11,6 +11,8 @@ jobs:
   tests:
     name: Tests
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_ENTRYPOINT: https://localhost
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -35,7 +37,7 @@ jobs:
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
       - name: Check HTTPS reachability
-        run: curl  -vk -o /dev/null https://127.0.0.1
+        run: curl  -vk -o /dev/null https://localhost
       - name: Create test database
         run: |
           docker compose exec -T php bin/console -e test doctrine:database:create
