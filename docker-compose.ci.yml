@@ -3,4 +3,4 @@ version: "3.4"
 services:
   caddy:
     environment:
-      SERVER_NAME: ${SERVER_NAME:-localhost, caddy:80}
+      SERVER_NAME: ${SERVER_NAME:-localhost|cda3-devops-hamza.garage404.com, caddy:80}
