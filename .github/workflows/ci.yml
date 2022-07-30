@@ -51,11 +51,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@v1
-      - name: Push to server
+      - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: 57.128.17.150
-          username: ubuntu
-          password: ubuntu
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
           script: pwd
