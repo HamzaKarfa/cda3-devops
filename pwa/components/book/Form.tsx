@@ -31,6 +31,7 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
       <Formik
         initialValues={book ? { ...book } : new Book()}
         validate={(values) => {
+          console.log(values);
           const errors = {};
           // add your validation logic here
           return errors;
