@@ -78,7 +78,7 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
                 name="rating"
                 id="_rating"
                 value={values.rating ?? ""}
-                type="text"
+                type="number"
                 placeholder=""
                 className={`form-control${
                   errors.rating && touched.rating ? " is-invalid" : ""
