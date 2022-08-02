@@ -38,6 +38,7 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
         }}
         onSubmit={async (values, { setSubmitting, setStatus, setErrors }) => {
           const isCreation = !values["@id"];
+          console.log(values);
           try {
             await fetch(isCreation ? "/books" : values["@id"], {
               method: isCreation ? "POST" : "PUT",
