@@ -47,6 +47,13 @@ jobs:
       - name: Jest
         run: docker compose exec -T pwa yarn test --ci --passWithNoTests
 
+
+      - name: Pull Request
+             
+
+
+
+
       #PR master
       - uses: repo-sync/pull-request@v2
         name: PullRequest Master
