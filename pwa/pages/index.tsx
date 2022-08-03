@@ -35,7 +35,7 @@ const Welcome = () => (
           </h1>
           <div className="main__before-starting">
             <p>
-              This container will host your{" "}
+              This container will host your{" "} 
               <a href="https://nextjs.org/">
                 <b>Next.js</b>
               </a>{" "}
