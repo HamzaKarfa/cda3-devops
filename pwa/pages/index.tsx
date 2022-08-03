@@ -28,7 +28,7 @@ const Welcome = () => (
         <div className="main__aside">
           <div className="aside__circle"/>
           <WebbyWelcome/>
-        </div>
+        </div> 
         <div className="main__content">
           <h1>
             Welcome to <strong>API Platform Hamza</strong>!
@@ -43,7 +43,7 @@ const Welcome = () => (
               generate a PWA:
             </p>
             <a
-              target="_blank"
+              target="_blank" 
               rel="noopener noreferrer"
               href="https://api-platform.com/docs/"
               className="main__button"
