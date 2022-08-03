@@ -1,0 +1,6 @@
+App\Entity\Book:
+    book_{1..100}:
+        name: <sentence(4)>
+        body: <name()>
+        rating: 0
+        datePublished: <dateTime()> 
