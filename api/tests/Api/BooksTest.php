@@ -18,18 +18,6 @@ class BooksTest extends ApiTestCase
             '@context' => '/contexts/Book',
             '@id' => '/books',
             '@type' => 'hydra:Collection',
-            'hydra:member' => [
-                [
-                    "@id" => "/books/1",
-                    "@type" => "Book",
-                    "id" => 1,
-                    "rating" => 0,
-                    "body" => "string",
-                    "author" => "string",
-                    "publication_date" => "2022-08-03T00:00:00+00:00",
-                    "publicationDate" => "2022-08-03T00:00:00+00:00"
-                ]
-            ],
         ]);
 
         // Because test fixtures are automatically loaded between each test, you can assert on them
