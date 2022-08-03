@@ -1,8 +1,9 @@
-<?php namespace App\Tests;
+<?php
+
+namespace App\Tests;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
 use App\Entity\Book;
-use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 
 class BooksTest extends ApiTestCase
 {
@@ -31,19 +32,19 @@ class BooksTest extends ApiTestCase
     public function testCreateBook(): void
     {
         static::createClient()->request('POST', '/books', ['json' => [
-            "rating" => 0,
-            "body" => "string",
-            "author" => "string",
-            "publicationDate" => "2022-08-03"
+            'rating' => 0,
+            'body' => 'string',
+            'author' => 'string',
+            'publicationDate' => '2022-08-03',
         ]]);
 
         $this->assertResponseStatusCodeSame(201);
         $this->assertJsonContains([
-            "@context"=> "/contexts/Book",
-            "@type"=> "Book",
-            "rating"=> 0,
-            "body"=> "string",
-            "author"=> "string",
+            '@context' => '/contexts/Book',
+            '@type' => 'Book',
+            'rating' => 0,
+            'body' => 'string',
+            'author' => 'string',
         ]);
     }
-} 
+}
