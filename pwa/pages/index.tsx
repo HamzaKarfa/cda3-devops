@@ -31,7 +31,7 @@ const Welcome = () => (
         </div> 
         <div className="main__content">
           <h1>
-            Welcome to <strong>API Platform Hamza</strong>!
+            Welcome to <strong>API Platform Test</strong>!
           </h1>
           <div className="main__before-starting">
             <p>
