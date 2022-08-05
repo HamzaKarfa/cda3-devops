@@ -89,7 +89,6 @@ export const Form: FunctionComponent<Props> = ({ greeting }) => {
               />
             </div>
             <ErrorMessage className="text-danger" component="div" name="name" />
-
             {status && status.msg && (
               <div
                 className={`alert ${
