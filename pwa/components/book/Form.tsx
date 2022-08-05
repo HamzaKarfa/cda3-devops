@@ -143,7 +143,7 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
                 name="publicationDate"
                 id="_publicationDate"
                 value={values.publicationDate ?? ""}
-                type="date"
+                type="text"
                 placeholder=""
                 className={`form-control${
                   errors.publicationDate && touched.publicationDate
@@ -168,7 +168,7 @@ export const Form: FunctionComponent<Props> = ({ book }) => {
                 name="publication_date"
                 id="_publication_date"
                 value={values.publication_date ?? ""}
-                type="date"
+                type="text"
                 placeholder=""
                 className={`form-control${
                   errors.publication_date && touched.publication_date
