@@ -3,16 +3,16 @@ export class Book {
   public "rating"?: number;
   public "body"?: string;
   public "author"?: string;
-  public "publicationDate"?: Date;
-  public "publication_date"?: Date;
+  public "publicationDate"?: string;
+  public "publication_date"?: string;
 
   constructor(
     _id?: string,
      rating?: number,
      body?: string,
      author?: string,
-     publicationDate?: Date,
-     publication_date?: Date
+     publicationDate?: string,
+     publication_date?: string
   ) {
     this["@id"] = _id;
     this["rating"] = rating;
